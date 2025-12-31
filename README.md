@@ -49,11 +49,9 @@ pkg install clang libxml2 libxslt -y
 1.  **Clone or Download** this repository to your machine.
     ```bash
     # If using git (once repo is initialized)
-    # git clone https://github.com/lwlinux/OSINT-tool.git
+    # git clone https://github.com/lwlinux32/OSINT-tool.git
     # cd osint-tool
     
-    # Or navigate to the directory where you saved the files
-    cd path/to/osint_tool
     ```
 
 2.  **Create a Virtual Environment** (Recommended)
