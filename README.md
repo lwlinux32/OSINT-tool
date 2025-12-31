@@ -49,7 +49,7 @@ pkg install clang libxml2 libxslt -y
 1.  **Clone or Download** this repository to your machine.
     ```bash
     # git clone https://github.com/lwlinux32/OSINT-tool.git
-    # cd osint-tool
+    # cd OSINT-tool
     ```
 
 
