@@ -1,5 +1,3 @@
-# OSINT-tool
-An OSINT tool that does EVERYTHING. Literally everything.
 # Modular OSINT Tool
 
 A simple, modular Open Source Intelligence (OSINT) tool written in Python. It supports reconnaissance on Usernames, Emails, Domains, IPs, and Phone Numbers.
