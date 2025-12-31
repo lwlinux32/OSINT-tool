@@ -1,2 +1,121 @@
 # OSINT-tool
 An OSINT tool that does EVERYTHING. Literally everything.
+# Modular OSINT Tool
+
+A simple, modular Open Source Intelligence (OSINT) tool written in Python. It supports reconnaissance on Usernames, Emails, Domains, IPs, and Phone Numbers.
+
+## Features
+- **Username Recon**: Check existence of usernames across 20+ social media platforms.
+- **Email Recon**: Validate syntax and check MX records.
+- **Domain Recon**: Fetch DNS records and WHOIS information.
+- **IP Recon**: Geolocation and reverse DNS lookups.
+- **Phone Recon**: Parsing, validation, carrier, and region extraction.
+
+## Installation
+
+### Prerequisites
+You need **Python 3.x** and **Git** installed on your system.
+
+### 1. Install System Dependencies
+
+Choose your operating system below:
+
+#### Debian / Ubuntu / Kali Linux
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv git -y
+```
+
+#### Arch Linux / Manjaro
+```bash
+sudo pacman -S python python-pip git
+```
+
+#### Fedora
+```bash
+sudo dnf install python3 python3-pip git
+```
+
+#### Termux (Android)
+```bash
+pkg update
+pkg install python git -y
+```
+*> Note: On Termux, you might need to install some build dependencies if packages fail to build:*
+```bash
+pkg install clang libxml2 libxslt -y
+```
+
+### 2. Set Up the Project
+
+1.  **Clone or Download** this repository to your machine.
+    ```bash
+    # If using git (once repo is initialized)
+    # git clone https://github.com/lwlinux/OSINT-tool.git
+    # cd osint-tool
+    
+    # Or navigate to the directory where you saved the files
+    cd path/to/osint_tool
+    ```
+
+2.  **Create a Virtual Environment** (Recommended)
+    *Why? This keeps your system clean and avoids "externally managed environment" errors.*
+    
+    *Debian/Ubuntu/Arch/Fedora:*
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+    
+    *Termux:*
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+    *(You will see `(venv)` appear in your terminal prompt)*
+
+3.  **Install Python Libraries**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+Run the tool using `python main.py` followed by the command and target.
+
+**Help Menu:**
+```bash
+python main.py --help
+```
+
+**Examples:**
+
+*   **Username Search:**
+    ```bash
+    python main.py username "johndoe"
+    ```
+
+*   **Email Analysis:**
+    ```bash
+    python main.py email "target@example.com"
+    ```
+
+*   **Domain Information:**
+    ```bash
+    python main.py domain "google.com"
+    ```
+
+*   **IP Geolocation:**
+    ```bash
+    python main.py ip "8.8.8.8"
+    ```
+
+*   **Phone Number Info:**
+    *(Use international format starting with +)*
+    ```bash
+    python main.py phone "+14155552671"
+    ```
+
+## Notes
+- Some aggressive rate-limiting by websites might affect Username reconnaissance.
+- WHOIS lookups utilize the system's `whois` capabilities or python library fallbacks.
