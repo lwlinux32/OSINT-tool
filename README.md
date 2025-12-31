@@ -48,20 +48,31 @@ pkg install clang libxml2 libxslt -y
 
 1.  **Clone or Download** this repository to your machine.
     ```bash
-    # If using git (once repo is initialized)
     # git clone https://github.com/lwlinux32/OSINT-tool.git
     # cd osint-tool
-    
     ```
 
-2.  **Create a Virtual Environment** (Recommended)
-    *Why? This keeps your system clean and avoids "externally managed environment" errors.*
+
+2.  **Install Python Libraries**
+    ```bash
+    pip install -r requirements.txt
+    ```
+   ## Note: "Externally managed enviroment"(PEP 6xx) or the "HINT:this package was installed by debian." errors(solved)
+     pip has a LOT of errors in linux so,the solvings for the installings are followed by:  
+   
+   # Breaking the system packages
+ by using the   ```--break-system-packages ``` and   ```--ignore-installed ``` your errors will be gone! But, breaking the system packages can make other errors so it is NOT recommended. The command will be:
+    ```bash
+     pip install requirements.txt -r --break-system-packages --ignore-installed
+    ```
+   # Create a Virtual Environment (recommended) 
+      
     
     *Debian/Ubuntu/Arch/Fedora:*
     ```bash
     python3 -m venv venv
     source venv/bin/activate
-    ```
+     ```
     
     *Termux:*
     ```bash
@@ -69,12 +80,6 @@ pkg install clang libxml2 libxslt -y
     source venv/bin/activate
     ```
     *(You will see `(venv)` appear in your terminal prompt)*
-
-3.  **Install Python Libraries**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Usage
 
 Run the tool using `python main.py` followed by the command and target.
@@ -112,6 +117,6 @@ python main.py --help
     python main.py phone "+14155552671"
     ```
 
-## Notes
+## Another Notes
 - Some aggressive rate-limiting by websites might affect Username reconnaissance.
 - WHOIS lookups utilize the system's `whois` capabilities or python library fallbacks.
