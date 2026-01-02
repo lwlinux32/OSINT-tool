@@ -58,7 +58,7 @@ pkg install clang libxml2 libxslt -y
     pip install -r requirements.txt
     ```
    ## Note: "Externally managed enviroment"(PEP 6xx) or the "HINT:this package was installed by debian." errors(solved)
-     pip has a LOT of errors in linux so,the solvings for the installings are followed by:  
+     * pip has a LOT of errors in linux so,the solvings for the installings are followed by: *  
    
    # Breaking the system packages
  by using the   ```--break-system-packages ``` and   ```--ignore-installed ``` your errors will be gone! But, breaking the system packages can make other errors so it is NOT recommended. The command will be:
@@ -93,7 +93,7 @@ python main.py --help
 
 *   **Username Search:**
     ```bash
-    python main.py username "johndoe"
+    python main.py username "username"
     ```
 
 *   **Email Analysis:**
